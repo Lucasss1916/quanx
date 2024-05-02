@@ -1,12 +1,14 @@
+/*************************************
+
 [rewrite_local]
-https://sdk.xiangyubizhi.com/(v2/front/photo/getOne|v2/front/member/info) url script-response-body https://raw.githubusercontent.com/Yuzihang9/quanx/main/xywall.js
-***********************/
-    [mitm]
+https://sdk.xiangyubizhi.com/(v2/front/photo/getOne|v2/front/member/info) url script-response-body xywall.js
+[mitm]
 hostname = sdk.xiangyubizhi.com
-    ************************************* /
+
+*************************************/
 var body = $response.body
-    .replace(/"vip":\s*\d/g, '"vip":1')
-    .replace(/"vipName":\s*\w+/g, `"vipName":"ÓÀ¾Ã»áÔ±"`)
-    .replace(/"endTime":\s*\w+/g, '"endTime":"2099-12-12"')
-    .replace(/false/g, "true");
+ .replace(/"vip":\s*\d/g, '"vip":1')
+  .replace(/"vipName":\s*\w+/g, `"vipName":"æ°¸ä¹…ä¼šå‘˜"`)
+  .replace(/"endTime":\s*\w+/g, '"endTime":"2099-12-12"')
+  .replace(/false/g, "true");
 $done({ body });
