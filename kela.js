@@ -5,7 +5,7 @@
 
 [rewrite_local]
 
-^http[s]?:\/\/www\.claritywallpaper\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/40sishi.js
+^http[s]?:\/\/www\.claritywallpaper\.com url script-response-body https://raw.githubusercontent.com/Yuzihang9/quanx/main/kela.js
 
 [mitm]
 
