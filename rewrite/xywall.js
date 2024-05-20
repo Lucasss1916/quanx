@@ -1,7 +1,7 @@
 /*************************************
 
 [rewrite_local]
-https://sdk.xiangyubizhi.com/(v2/front/photo/getOne|v2/front/member/info) url script-response-body https://raw.githubusercontent.com/Yuzihang9/quanx/main/xywall.js
+https://sdk.xiangyubizhi.com/(v2/front/photo/getOne|v2/front/member/info) url script-response-body https://raw.githubusercontent.com/Yuzihang9/quanx/main/rewrite/xywall.js
 [mitm]
 hostname = sdk.xiangyubizhi.com
 
