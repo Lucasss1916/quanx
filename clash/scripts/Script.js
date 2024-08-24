@@ -69,6 +69,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
     "path": "./ruleset/loyalsoldier/icloud.yaml"
   },
+  "Github": {  
+    ...ruleProviderCommon,
+    "behavior": "domain",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
+    "path": "./ruleset/loyalsoldier/Github.yaml"  
+  },
   "apple": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -190,10 +196,9 @@ const rules = [
   "DOMAIN,v2rayse.com,节点选择", // V2rayse节点工具
   "DOMAIN-SUFFIX,steamcontent,全局直连",
   "DOMAIN-SUFFIX,apple,苹果服务",
-  // blackmatrix7 规则集
   "RULE-SET,openai,ChatGPT",
-  // Loyalsoldier 规则集
-  "RULE-SET,Telegram,电报消息"  ,  
+  "RULE-SET,Github,国外媒体",
+  "RULE-SET,Telegram,电报消息"  ,                          
   "RULE-SET,applications,全局直连",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,private,全局直连",
