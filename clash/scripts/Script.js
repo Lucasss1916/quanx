@@ -83,7 +83,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/kr.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -93,7 +93,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/eu.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -103,7 +103,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/au.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
