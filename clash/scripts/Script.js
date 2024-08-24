@@ -63,14 +63,6 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
     "path": "./ruleset/loyalsoldier/reject.yaml"
   },
-  "geolocation-!cn": {
-            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml",
-            path: "./ruleset/geolocation-!cn.yaml",
-            behavior: "domain",
-            interval: 86400,
-            format: "yaml",
-            type: "http",
-  },
   "icloud": {
     ...ruleProviderCommon,
     "behavior": "domain",
@@ -149,6 +141,12 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
     "path": "./ruleset/loyalsoldier/telegramcidr.yaml"
   },
+    "Telegram": {
+    ...ruleProviderCommon,
+    "behavior": "ipcidr",
+    "url": "  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+    "path": "./ruleset/loyalsoldier/Telegram.yaml"
+  },
   "cncidr": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
@@ -172,7 +170,15 @@ const ruleProviders = {
     "behavior": "classical",
     "url": "https://fastly.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml",
     "path": "./ruleset/blackmatrix7/openai.yaml"
-  }
+  },  
+  "geolocation-!cn": {
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml",
+            path: "./ruleset/geolocation-!cn.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+  },
 };
 // 规则
 const rules = [
@@ -187,7 +193,7 @@ const rules = [
   // blackmatrix7 规则集
   "RULE-SET,openai,ChatGPT",
   // Loyalsoldier 规则集
-  "RULE-SET,geolocation-!cn,节点选择",    
+  "RULE-SET,Telegram,电报消息"    
   "RULE-SET,applications,全局直连",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,private,全局直连",
@@ -206,6 +212,7 @@ const rules = [
   "RULE-SET,lancidr,全局直连,no-resolve",
   "RULE-SET,cncidr,全局直连,no-resolve",
   "RULE-SET,telegramcidr,电报消息,no-resolve",
+  "RULE-SET,geolocation-!cn,节点选择", 
   // 其他规则
   "GEOIP,LAN,全局直连,no-resolve",
   "GEOIP,CN,全局直连,no-resolve",
