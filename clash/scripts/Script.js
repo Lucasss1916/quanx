@@ -54,7 +54,7 @@ const ruleProviders = {
   "Steam": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://raw.githubusercontent.com/Lucasss1916/quanx/main/clash/rules/steam.txt",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml",
     "path": "./ruleset/loyalsoldier/Steam.yaml"
   },
   "reject": {
@@ -62,6 +62,14 @@ const ruleProviders = {
     "behavior": "domain",
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
     "path": "./ruleset/loyalsoldier/reject.yaml"
+  },
+  "geolocation-!cn": {
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.yaml",
+            path: "./ruleset/geolocation-!cn.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
   },
   "icloud": {
     ...ruleProviderCommon,
@@ -102,7 +110,7 @@ const ruleProviders = {
   "google": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt",
+    "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.yaml",
     "path": "./ruleset/loyalsoldier/Youtube.yaml"
   },
   "proxy": {
@@ -179,6 +187,7 @@ const rules = [
   // blackmatrix7 规则集
   "RULE-SET,openai,ChatGPT",
   // Loyalsoldier 规则集
+  "RULE-SET,geolocation-!cn,节点选择",    
   "RULE-SET,applications,全局直连",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,private,全局直连",
