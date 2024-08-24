@@ -141,7 +141,7 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt",
     "path": "./ruleset/loyalsoldier/telegramcidr.yaml"
   },
-    "Telegram": {
+  "Telegram": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
     "url": "  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
