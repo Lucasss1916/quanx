@@ -7,7 +7,7 @@ function main(config) {
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
             name: "PROXY",
             type: "select",
-            proxies: ["AUTO", "HK", "SG", "JP", "US","TW"],
+            proxies: ["AUTO", "HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png",
@@ -22,25 +22,25 @@ function main(config) {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
             name: "AIGC",
             type: "select",
-            proxies: ["SG", "JP", "US","TW"],
+            proxies: ["SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png",
             name: "Spotify",
             type: "select",
-            proxies: ["SG", "JP", "US","TW"],
+            proxies: ["SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
             name: "Telegram",
             type: "select",
-            proxies: ["HK", "SG", "JP", "US","TW"],
+            proxies: ["HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png",
             name: "Google",
             type: "select",
-            proxies: ["HK", "SG", "JP", "US","TW"],
+            proxies: ["HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
@@ -73,6 +73,46 @@ function main(config) {
             interval: 300,
         },
         {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png",
+            "include-all": true,
+            "exclude-filter":
+                "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+            filter: "(?i)台湾|Taiwan|taiwan|tw",
+            name: "TW",
+            type: "url-test",
+            interval: 300,
+        },
+        {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png",
+            "include-all": true,
+            "exclude-filter":
+                "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+            filter: "(?i)韩国|Korea|KR|kr",
+            name: "KR",
+            type: "url-test",
+            interval: 300,
+        },
+        {
+            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            "include-all": true,
+            "exclude-filter":
+                "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+            filter: "(?i)法国|德国|英国",
+            name: "EU",
+            type: "url-test",
+            interval: 300,
+        },
+        {
+            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            "include-all": true,
+            "exclude-filter":
+                "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
+            filter: "(?i)澳大利亚|Australia",
+            name: "AU",
+            type: "url-test",
+            interval: 300,
+        },
+        {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png",
             "include-all": true,
             "exclude-filter":
@@ -82,16 +122,7 @@ function main(config) {
             type: "url-test",
             interval: 300,
         },
-        {
-            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png",
-            "include-all": true,          
-            "exclude-filter":
-                "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
-            filter: "(?i)台湾|Taiwan|taiwan|tw",
-            name: "TW",         
-            type: "url-test",
-            interval: 300,
-        },
+
     ];
     if (!config['rule-providers']) {
         config['rule-providers'] = {};
