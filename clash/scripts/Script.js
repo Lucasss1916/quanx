@@ -69,11 +69,11 @@ const ruleProviders = {
     "url": "https://fastly.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt",
     "path": "./ruleset/loyalsoldier/icloud.yaml"
   },
-  "Github": {  
+  "Github": {
     ...ruleProviderCommon,
     "behavior": "domain",
     "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
-    "path": "./ruleset/loyalsoldier/Github.yaml"  
+    "path": "./ruleset/loyalsoldier/Github.yaml"
   },
   "apple": {
     ...ruleProviderCommon,
