@@ -96,7 +96,7 @@ const ruleProviders = {
   "Youtube": {
     ...ruleProviderCommon,
     "behavior": "domain",
-    "url": "https://raw.githubusercontent.com/Lucasss1916/quanx/main/clash/rules/youtube.txt",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml",
     "path": "./ruleset/lucas/Spotify.yaml"
   },
   "google": {
