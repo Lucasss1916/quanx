@@ -193,7 +193,7 @@ const rules = [
   // blackmatrix7 规则集
   "RULE-SET,openai,ChatGPT",
   // Loyalsoldier 规则集
-  "RULE-SET,Telegram,电报消息"    
+  "RULE-SET,Telegram,电报消息"  ,  
   "RULE-SET,applications,全局直连",
   "RULE-SET,Spotify,Spotify",
   "RULE-SET,private,全局直连",
