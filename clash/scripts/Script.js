@@ -25,6 +25,12 @@ function main(config) {
             proxies: ["SG", "JP", "US","TW","EU","AU"],
         },
         {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/github.png",
+            name: "Github",  
+            type: "select",
+            proxies: ["DIRECT","SG", "JP", "US","TW","EU","AU"],
+        },
+        {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png",
             name: "Spotify",
             type: "select",
@@ -144,6 +150,14 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
+        github: {
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
+            path: "./ruleset/github.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
         telegram_domain: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.yaml",
             path: "./ruleset/telegram_domain.yaml",
@@ -251,6 +265,7 @@ function main(config) {
     });
 
     config["rules"] = [
+        "RULE-SET,github,Github",   
         "RULE-SET,spotify,Spotify",
         "RULE-SET,private,DIRECT",
         "RULE-SET,bing,AIGC",
