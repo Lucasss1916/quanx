@@ -144,7 +144,7 @@ const ruleProviders = {
   "Telegram": {
     ...ruleProviderCommon,
     "behavior": "ipcidr",
-    "url": "  https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+    "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
     "path": "./ruleset/loyalsoldier/Telegram.yaml"
   },
   "cncidr": {
