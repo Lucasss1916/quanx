@@ -282,7 +282,7 @@ function main(config) {
         "RULE-SET,github,Github",   
         "RULE-SET,spotify,Spotify",
         "RULE-SET,private,DIRECT",
-        "RULE-SET,bing,AIGC",
+        "RULE-SET,bing,Microsoft",
         "RULE-SET,copilot,AIGC",
         "RULE-SET,bard,AIGC",  
         "RULE-SET,openai,AIGC",
