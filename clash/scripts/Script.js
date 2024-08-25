@@ -49,6 +49,12 @@ function main(config) {
             proxies: ["HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png",
+            name: "Microsoft",  
+            type: "select",
+            proxies: ["DIRECT","HK", "SG", "JP", "US","TW","EU","AU"],
+        },
+        {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
             "include-all": true,
             "exclude-filter":
@@ -128,7 +134,6 @@ function main(config) {
             type: "url-test",
             interval: 300,
         },
-
     ];
     if (!config['rule-providers']) {
         config['rule-providers'] = {};
@@ -153,6 +158,14 @@ function main(config) {
         github: {
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
             path: "./ruleset/github.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        microsoft: {  
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
+            path: "./ruleset/microsoft.yaml",
             behavior: "domain",
             interval: 86400,
             format: "yaml",
@@ -265,6 +278,7 @@ function main(config) {
     });
 
     config["rules"] = [
+        "RULE-SET,microsoft,Microsoft",  
         "RULE-SET,github,Github",   
         "RULE-SET,spotify,Spotify",
         "RULE-SET,private,DIRECT",
