@@ -22,19 +22,19 @@ function main(config) {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
             name: "AIGC",
             type: "select",
-            proxies: ["SG", "JP","KR", "US","TW","EU","AU"],
+            proxies: ["HK","SG", "JP","KR", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/github.png",
             name: "Github",  
             type: "select",
-            proxies: ["DIRECT","SG", "JP", "US","TW","EU","AU","KR"],
+            proxies: ["DIRECT","HK","SG", "JP", "US","TW","EU","AU","KR"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png",
             name: "Spotify",
             type: "select",
-            proxies: ["SG", "JP", "US","TW","EU","AU","KR"],
+            proxies: ["HK","SG", "JP", "US","TW","EU","AU","KR"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
