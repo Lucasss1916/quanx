@@ -7,7 +7,7 @@ function main(config) {
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
             name: "PROXY",
             type: "select",
-            proxies: ["AUTO", "HK", "SG", "JP", "US","TW","EU","AU"],
+            proxies: ["AUTO", "HK", "SG", "JP","KR", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png",
@@ -22,25 +22,37 @@ function main(config) {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
             name: "AIGC",
             type: "select",
-            proxies: ["SG", "JP", "US","TW","EU","AU"],
+            proxies: ["HK","SG", "JP","KR", "US","TW","EU","AU"],
+        },
+        {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/github.png",
+            name: "Github",  
+            type: "select",
+            proxies: ["DIRECT","HK","SG", "JP", "US","TW","EU","AU","KR"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Spotify.png",
             name: "Spotify",
             type: "select",
-            proxies: ["SG", "JP", "US","TW","EU","AU"],
+            proxies: ["HK","SG", "JP", "US","TW","EU","AU","KR"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
             name: "Telegram",
             type: "select",
-            proxies: ["HK", "SG", "JP", "US","TW","EU","AU"],
+            proxies: ["HK", "SG", "JP", "US","TW","EU","AU","KR"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png",
             name: "Google",
             type: "select",
-            proxies: ["HK", "SG", "JP", "US","TW","EU","AU"],
+            proxies: ["HK", "SG", "JP", "US","TW","EU","AU","KR"],
+        },
+        {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png",
+            name: "Microsoft",  
+            type: "select",
+            proxies: ["DIRECT","HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
@@ -83,7 +95,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/kr.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -93,7 +105,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/eu.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -103,7 +115,7 @@ function main(config) {
             interval: 300,
         },
         {
-            icon: "https://european-union.europa.eu/themes/contrib/oe_theme/dist/eu/images/logo/standard-version/positive/logo-eu--en.svg",
+            icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/au.svg",
             "include-all": true,
             "exclude-filter":
                 "(?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置",
@@ -122,7 +134,6 @@ function main(config) {
             type: "url-test",
             interval: 300,
         },
-
     ];
     if (!config['rule-providers']) {
         config['rule-providers'] = {};
@@ -139,6 +150,22 @@ function main(config) {
         cn_domain: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml",
             path: "./ruleset/cn_domain.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        github: {
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml",
+            path: "./ruleset/github.yaml",
+            behavior: "domain",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        microsoft: {  
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml",
+            path: "./ruleset/microsoft.yaml",
             behavior: "domain",
             interval: 86400,
             format: "yaml",
@@ -251,9 +278,11 @@ function main(config) {
     });
 
     config["rules"] = [
+        "RULE-SET,microsoft,Microsoft",  
+        "RULE-SET,github,Github",   
         "RULE-SET,spotify,Spotify",
         "RULE-SET,private,DIRECT",
-        "RULE-SET,bing,AIGC",
+        "RULE-SET,bing,Microsoft",
         "RULE-SET,copilot,AIGC",
         "RULE-SET,bard,AIGC",  
         "RULE-SET,openai,AIGC",
