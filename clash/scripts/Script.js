@@ -55,6 +55,12 @@ function main(config) {
             proxies: ["DIRECT","HK", "SG", "JP", "US","TW","EU","AU"],
         },
         {
+            icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png",
+            name: "Apple",    
+            type: "select",
+            proxies: ["DIRECT","HK", "SG", "JP", "US","TW","EU","AU"],
+        },
+        {
             icon: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png",
             "include-all": true,
             "exclude-filter":
@@ -275,6 +281,54 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
+        apple: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.yaml",
+            path: "./ruleset/apple.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        appleupdate: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-update.yaml",
+            path: "./ruleset/appleupdate.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        applepki: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-pki@cn.yaml",
+            path: "./ruleset/applepki.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        applecn: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-cn.yaml",
+            path: "./ruleset/applecn.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        apple@cn: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple@cn.yaml",
+            path: "./ruleset/apple@cn.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
+        appledaily: {
+            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/appledaily.yaml",
+            path: "./ruleset/appledaily.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
     });
 
     config["rules"] = [                     
@@ -289,6 +343,14 @@ function main(config) {
         "RULE-SET,openai,AIGC",
         "RULE-SET,claude,AIGC",
         "RULE-SET,steam,DIRECT",
+        
+        "RULE-SET,apple,Apple",  
+        "RULE-SET,appleupdate,Apple",
+        "RULE-SET,applepki,Apple",
+        "RULE-SET,applecn,Apple",
+        "RULE-SET,apple@cn,Apple",
+        "RULE-SET,appledaily,Apple", 
+        
         "RULE-SET,telegram_domain,Telegram",
         "RULE-SET,telegram_ip,Telegram",
         "RULE-SET,google_domain,Google",
