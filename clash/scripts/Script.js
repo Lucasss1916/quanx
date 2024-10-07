@@ -313,7 +313,7 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
-        apple@cn: {
+        "apple@cn": {
             url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple@cn.yaml",
             path: "./ruleset/apple@cn.yaml",
             behavior: "classical",
