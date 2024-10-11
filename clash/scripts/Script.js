@@ -289,7 +289,7 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
-        apple: {
+        appleID: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleID/AppleID.yaml",
             path: "./ruleset/AppleID.yaml",
             behavior: "classical",
@@ -297,7 +297,7 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
-        AppleProxy: {
+        appleProxy: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml",
             path: "./ruleset/AppleProxy.yaml",
             behavior: "classical",
@@ -305,10 +305,10 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
-        Apple: {
+        apple: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml",
             path: "./ruleset/Apple.yaml",
-            behavior: "classical",
+            behavior: "classical",   
             interval: 86400,
             format: "yaml",
             type: "http",
@@ -352,9 +352,9 @@ function main(config) {
         "RULE-SET,claude,AIGC",
         "RULE-SET,steam,DIRECT",
         "RULE-SET,steamcn,DIRECT",
-        "RULE-SET,apple,Apple",  
-        "RULE-SET,appleupdate,Apple",
-        "RULE-SET,applepki,Apple",
+        "RULE-SET,appleID,Apple",  
+        "RULE-SET,apple,Apple",
+        "RULE-SET,appleProxy,Apple",
         "RULE-SET,applecn,Apple",
         "RULE-SET,apple@cn,Apple",
         "RULE-SET,appledaily,Apple", 
