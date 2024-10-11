@@ -273,6 +273,14 @@ function main(config) {
             format: "yaml",
             type: "http",
         },
+        steamcn: {
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
+            path: "./ruleset/steamcn.yaml",
+            behavior: "classical",
+            interval: 86400,
+            format: "yaml",
+            type: "http",
+        },
         spotify: {
             url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml",
             path: "./ruleset/Spotify.yaml",
@@ -282,24 +290,24 @@ function main(config) {
             type: "http",
         },
         apple: {
-            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple.yaml",
-            path: "./ruleset/apple.yaml",
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleID/AppleID.yaml",
+            path: "./ruleset/AppleID.yaml",
             behavior: "classical",
             interval: 86400,
             format: "yaml",
             type: "http",
         },
-        appleupdate: {
-            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-update.yaml",
-            path: "./ruleset/appleupdate.yaml",
+        AppleProxy: {
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml",
+            path: "./ruleset/AppleProxy.yaml",
             behavior: "classical",
             interval: 86400,
             format: "yaml",
             type: "http",
         },
-        applepki: {
-            url: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/apple-pki@cn.yaml",
-            path: "./ruleset/applepki.yaml",
+        Apple: {
+            url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml",
+            path: "./ruleset/Apple.yaml",
             behavior: "classical",
             interval: 86400,
             format: "yaml",
@@ -343,7 +351,7 @@ function main(config) {
         "RULE-SET,openai,AIGC",
         "RULE-SET,claude,AIGC",
         "RULE-SET,steam,DIRECT",
-        
+        "RULE-SET,steamcn,DIRECT",
         "RULE-SET,apple,Apple",  
         "RULE-SET,appleupdate,Apple",
         "RULE-SET,applepki,Apple",
