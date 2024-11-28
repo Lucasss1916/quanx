@@ -341,6 +341,7 @@ function main(config) {
 
     config["rules"] = [                     
         "IP-CIDR,6.6.6.6/32,DIRECT,no-resolve",
+        
         "RULE-SET,microsoft,Microsoft",  
         "RULE-SET,github,Github",   
         "RULE-SET,spotify,Spotify",
